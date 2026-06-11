@@ -32,3 +32,6 @@ El sistema permitió comparar el rendimiento entre ambos formatos en escenarios 
 ## Conclusión
 
 Se concluye que no existe un único formato óptimo, sino que su elección depende del tipo de datos y el objetivo del sistema. CSV es más eficiente en volumen, mientras que JSON ofrece mayor flexibilidad estructural.
+
+
+Se concluye que no existe un único formato óptimo, sino que su elección depende del tipo de datos y el objetivo del sistema. CSV es más eficiente en volumen, mientras que JSON ofrece mayor flexibilidad estructural.

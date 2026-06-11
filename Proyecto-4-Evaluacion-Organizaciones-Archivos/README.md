@@ -2,14 +2,18 @@
 
 ## Descripción del Sistema
 
-Este proyecto consiste en un entorno de evaluación y análisis del rendimiento de diferentes organizaciones de archivos mediante la simulación de cargas masivas de datos. El sistema fue diseñado para analizar el comportamiento de los formatos de almacenamiento bajo diferentes volúmenes de información.
+Este proyecto consiste en un entorno experimental desarrollado en Python para evaluar el rendimiento de diferentes organizaciones de archivos mediante la simulación de un sistema hospitalario. El sistema genera grandes volúmenes de registros clínicos y almacena la información en formatos CSV y JSON con el propósito de analizar su comportamiento en términos de rendimiento, almacenamiento y escalabilidad.
 
-Se implementaron pruebas de estrés utilizando grandes cantidades de registros simulados, con el objetivo de medir el rendimiento, la eficiencia de almacenamiento y la escalabilidad de los sistemas basados en archivos.
+La aplicación permite generar millones de registros de pacientes simulados, registrar nuevos pacientes, realizar búsquedas, medir tiempos de lectura y escritura, evaluar el consumo de memoria RAM y generar análisis estadísticos sobre los datos almacenados.
 
 ## Tecnologías Utilizadas
 
-* Python
+* Python 3
 * Pandas
+* CSV
+* JSON
+* Matplotlib
+* Tracemalloc
 
 ## Formatos de Archivo Utilizados
 
@@ -18,17 +22,42 @@ Se implementaron pruebas de estrés utilizando grandes cantidades de registros s
 
 ## Justificación del Formato
 
-El formato CSV fue seleccionado por su eficiencia en almacenamiento y rapidez de lectura en grandes volúmenes de datos, ya que no contiene estructuras jerárquicas complejas. Por otro lado, JSON se utilizó debido a su capacidad para representar estructuras anidadas, permitiendo simular información más compleja como expedientes o registros con múltiples atributos.
+El formato CSV fue utilizado debido a su simplicidad estructural, bajo consumo de almacenamiento y alta velocidad de procesamiento para datos tabulares masivos. Por otra parte, JSON fue implementado para representar información médica jerárquica, permitiendo almacenar estructuras complejas como consultas, medicamentos y especialidades asociadas a cada paciente.
 
-## Evaluación del Sistema
+La comparación entre ambos formatos permitió evaluar el equilibrio entre rendimiento computacional y flexibilidad estructural.
 
-El sistema permitió comparar el rendimiento entre ambos formatos en escenarios de alta carga, observando diferencias en:
+## Funcionalidades Implementadas
 
-* Tiempo de lectura
-* Tiempo de escritura
-* Consumo de memoria
-* Escalabilidad del sistema
+* Generación automática de registros hospitalarios.
+* Almacenamiento masivo de información en CSV y JSON.
+* Registro de nuevos pacientes.
+* Búsqueda por identificador.
+* Búsqueda por nombre.
+* Medición de tiempos de lectura.
+* Medición de tiempos de escritura.
+* Evaluación de consumo de memoria RAM.
+* Comparación de tamaños de archivo.
+* Análisis estadístico de pacientes.
+* Generación de gráficas para visualización de resultados.
 
-## Conclusión
+## Operaciones de Archivos Implementadas
 
-Se concluye que no existe un único formato óptimo, sino que su elección depende del tipo de datos y el objetivo del sistema. CSV es más eficiente en volumen, mientras que JSON ofrece mayor flexibilidad estructural.
+* Apertura de archivos mediante `open()`.
+* Escritura secuencial utilizando `csv.DictWriter()`.
+* Serialización de estructuras mediante `json.dumps()`.
+* Deserialización utilizando `json.load()`.
+* Lectura secuencial de registros.
+* Registro de información mediante modo append (`a`).
+
+## Resultados Obtenidos
+
+Las pruebas demostraron que CSV presenta una mayor eficiencia en almacenamiento y velocidad de procesamiento para grandes volúmenes de información. Sin embargo, JSON ofrece una mayor capacidad para representar estructuras complejas y relaciones jerárquicas, características esenciales en sistemas hospitalarios reales.
+
+## Competencias Aplicadas
+
+* Organización y administración de archivos.
+* Evaluación de estructuras de almacenamiento.
+* Procesamiento masivo de datos.
+* Medición de rendimiento computacional.
+* Visualización e interpretación de información.
+* Apoyo a la toma de decisiones mediante análisis de datos.

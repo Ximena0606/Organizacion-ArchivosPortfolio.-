@@ -1,4 +1,4 @@
-# Proyecto 3 - Sistema de Análisis y Visualización de Ventas
+# Proyecto 3 - Actividad integradora de evaluación_C3}
 
 ## Descripción del Sistema
 
